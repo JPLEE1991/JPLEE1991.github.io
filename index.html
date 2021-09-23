@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caramel&family=Lobster&display=swap" rel="stylesheet">  <!--  -->
+
+  <script src="./js/jquery-3.6.0.js"></script>
+  
+</head>
+<body>
+  <video muted autoplay loop id="myVideo">
+    <source src="./Record - 65390.mp4" type="video/mp4">
+    <strong>해당 브라우저에서는 지원하지 않습니다.</strong>
+  </video>
+  <header>
+    <nav class="navbar">
+      <div class="gnb_logo">
+        <h1><a href="#myVideo">Programmer Jin</a></h1>
+      </div>
+      <ul class="gnb_menu">
+        <li><a href="#speechLink1" id="aboutLink">about</a></li>
+        <li><a href="#speech2">roadmap</a></li>
+        <li><a href="#speech4">hobby</a></li>
+        <li><a href="#signinButton">sign up</a></li>
+      </ul>
+      <div class="gnb_icon">
+          <li>
+            <audio id="myAudio" src="./bensound-jazzyfrenchy.mp3" preload="auto">
+            </audio>
+            <a id="audioBtn" onClick="togglePlay()"><i class="fas fa-headphones"></i></a>
+          </li>
+          <li><a href=""><i class="fab fa-youtube"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fas fa-bold"></i></a></li>
+      </div>  
+  </nav>
+  </header>
+
+<div class="page">
+<div id="page1">
+  <div class="jb_text">
+    <div id="jp_text_content"><br>I<br>program<br>because . . .</d>
+    </div>
+    <!--  -->
+    <!-- <a href="https://www.squarespace.com/">참조링크</a>
+    <a href="https://togethxr.com/">참조링크2</a>
+    <a href="https://m.blog.naver.com/1stopedu/221978065680">앨리스</a>
+    <a href="https://kutar37.tistory.com/entry/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%87%BC-%EA%B5%AC%ED%98%84-cssjavascriptjquery">슬라이드쇼</a> -->
+  </div>
+</div>
+<div id="page2">
+
+<div id="speechLink1" class="speech speech1">
+  <span style="display: none;">"Every adventure requires a first step"</span>
+</div>
+<div id=about_wrapper>
+  <div id="gallery">
+    <div>
+
+      <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <img src="./Photos/KakaoTalk_20210922_145708101.jpg" >
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="./Photos/KakaoTalk_20210922_145708101_01.jpg">
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <!-- <span class="dot"></span>  -->
+        </div>
+        
+
+    </div>
+  </div>
+  <div id="content_box">
+    <h2>내가 만들어낸 결과물</h2>
+    <br>
+    <p> 개발자 진로의 결정은 기존에 해오던 일과는 다른 새로운 길에 대한 도전이었습니다. 하지만 시작을 하고, 무언가 제가 배운 프로그래밍 기술로, 코딩 기술로 주어진 간단한 문제들을 해결해 나가면서 희열과 짜릿함을 느꼈습니다. </p>
+    <p>그리고 그렇게 문제들을 해결해나가고, 제 결과물을 확인하며, 새로운 진로에 대한 확신을 얻었습니다.</p>
+    <p> 저는 훌륭한 기술을 가진 프로그래머뿐만 아니라, 사람들과 소통하며 일상 속의 불편한 문제들을 같이 고민하고, 해결해나가는 개발자가 되고 싶습니다.  </p>
+  </div>
+</div>
+
+  
+</div>
+<div class="page3">
+  <div id="speech2">
+    <span class="ml2">"Nothing's impossible!"</span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+  </div>
+
+  <div class="grid_container">
+    <div>
+      <img src="./6months.jpg" alt="" class="roadmap_img">
+    </div>  
+    <div class="postit">
+      <p>6month later</p>
+      <p>백엔드 개발자로써의 시작. 학원을 수료하고, 주언어 자바를 기반으로 웹개발자로 취업해보겠습니다. 취업 후엔 다양한 웹사이트를 만들어 나가며, 스킬들을 쌓아나가겠습니다.  </p>
+    </div>  
+    <div class="postit">
+      <p>2years later</p>
+      <p>프리랜서로 다양한 프로젝트를 맡아 도전해보겠습니다. 나아가 웹개발 뿐만 아니라, 앱 개발과 관련한 공부와 최신 트랜드에 맞는 개발언어들을 조금씩 공부해나가며, 시장에 뒤쳐지지 않고, 배워나가는 개발자가 되겠습니다. </p>
+    </div>
+      <img src="./2years.png" alt="" class="roadmap_img">
+      <img src="./5years.jpg" alt="" class="roadmap_img">
+    <div class="postit">
+      <p>5 years later</p>
+      <p> 저의 새로운 아이디어들을 기반으로 직접 앱 개발들을 해보겠습니다. 아직은 IT기술이 낯선 시장이나 타게층에도 웹앱 기술들을 접목해, 향상된 기술 속에서 모두가 상생하고 발전해나갈 수 있는 사회를 만드는 데 이바지하겠습니다.</p>
+    </div>
+  </div>
+
+
+</div>
+
+<section class="page4">
+  <div>
+    <div id= "speech4">
+      <h2>Do you know Salsa ?</h2> 
+      <p>Salsa is a &nbsp</p> 
+      <div id=flip>
+        <div><div>my hobby!</div></div>
+        <div><div>Latin Dance !</div></div>
+        <div><div>Salsa source?</div></div>
+      </div>
+    </div>
+
+    <article>
+      <div id="hobby_contents">
+        <div id="salsa_img">
+          <img src="https://i.ytimg.com/vi/UcDAg1IvZvc/maxresdefault.jpg" alt="" style="width: 40%;" align="left" hspace="10">
+        </div>
+        <div id="salsa_article">
+          <h2>취미로서의 살사</h2>
+          <p>살사에 대해 어떻게 알고 계신가요? 토마토 베이스의 다양한 재료들이 들어간 멕시칸 소스? 그것도 맞지만 제가 소개할 부분은 바로 살사라는 춤의 장르입니다. 살사는 라틴재즈 음악에 맞춰 추는 춤입니다. 앞서 말씀드렸다시피, 살사소스도 다양한 재료들이 어우러져 맛을 내는 것처럼, 살사의 기원도 쿠바의 손, 미국의 재즈 등 다양한 음악들이 섞여 탄생했습니다.</p>
+          <p>약 4년 간 살사 동호회에서 취미 생활을 즐기고 있습니다. 처음엔 단순히 살사 수업을 듣는 정도였습니다. 하지만 시간이 지나며 살사라는 새로운 틀 안에서 공연을 하기도 하고, 나이도 직업도 다른 사람들을 만나는 장이 되기도 하고, 해외 여행을 가서는 살사라는 춤으로 현지 친구들과 소통을 하는 등 인생의 새로운 기회들을 접해보기도 하였습니다.</p>
+          <br>
+          <p>만일 남들과 다른 새로운 취미를 갖고 싶다면, 살사는 어떨까요?</p>
+        </div>
+      </div>
+    </article>
+    <div id="salsaVideo">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gRZtAjun-2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe title="[강남 홍대 분당 살사댄스클럽 에버라틴] 제75차  토요일 살사.." width="640" height="360" src="https://play-tv.kakao.com/embed/player/cliplink/v9ba8WyyRqgaP5U5ihyykhU@my?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe>  </div>
+</section>
+<section class="page5">
+  <div id="page5_container">
+    <p>Newsletter Sign-up</p>
+    <p>회원가입시 새 소식을 보내드려요</p>
+    <a href="login.html"><button id="signinButton">회원가입하기</button></a>
+  </div>
+  
+</section>
+  
+  
+  <footer>
+    <div class="sign_up">
+      <h3>Thank you for visiting</h3>
+      <ul id="my_info">
+        <li>NAME: LEE JINPYO</li>
+        <li>E-MAIL: whitesunny65@naver.com</li>
+        <li>PHONE: (+082) 010-3142-0076</li>
+        <li>BLOG: https://blog.naver.com/whitesunny65</li>
+      </ul>
+    </div>
+      <div id="footer_icon">
+        <ul>
+          <li><a href=""><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.instagram.com/swimmingintheforest"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://blog.naver.com/whitesunny65"><i class="fas fa-bold"></i></a></li>
+        </ul>
+      </div>  
+  </footer>
+
+  <script type="text/javascript" src="script.js"></script>
+  
+</body>
+</html>

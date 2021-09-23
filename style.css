@@ -1,0 +1,501 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+/* page1 start */
+video {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100;
+  border-bottom: 5px solid black;
+}
+header {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.198);
+  width: 100%;
+}
+header:hover {
+  mix-blend-mode: difference;
+  background-color: rgb(148, 148, 148);
+  color: white;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+#page1 {
+  height: 100vh;
+}
+
+.jb_text > div {
+  font-size: 10vmin;
+  color: white;
+  padding-left: 100px;
+  line-height: 200%;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  opacity: 0.8;
+}
+
+.gnb_logo {
+  font-size: 20px;
+}
+.gnb_logo > h1 > a {
+  font-size: 30px;
+  color: white;
+  font-family: Lobster;
+}
+.gnb_menu {
+  display: flex;
+  list-style: none;
+}
+.gnb_menu > li {
+  padding: 8px 30px;
+  position: relative;
+}
+.gnb_menu > li:hover {
+  font-weight: bold;
+}
+.gnb_menu > li > a {
+  font-size: 1.5vw;
+  color: rgb(233, 233, 233);
+  mix-blend-mode: multiply;
+  font-weight: bold;
+  font-family: "Jua", sans-serif;
+  opacity: 0.9;
+}
+.gnb_logo {
+  padding-left: 20px;
+}
+.gnb_icon {
+  display: flex;
+  list-style: none;
+  margin-right: 2vw;
+}
+.gnb_icon > li {
+  padding: 8px 12px;
+}
+.gnb_icon > li > a {
+  color: rgb(233, 233, 233);
+}
+.jp_text {
+  border: 10px solid black;
+}
+#audioBtn {
+  color: white;
+}
+#audioBtn:hover {
+  cursor: pointer;
+}
+
+#sns_icon > li {
+  margin-left: 4vmin;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+/* page2 about start */
+#page2 {
+  height: 100vh;
+}
+
+#about_wrapper {
+  display: flex;
+  margin-top: 20vh;
+}
+#content_box {
+  width: 35vw;
+  margin-right: 10vw;
+}
+#content_box > h2 {
+  font-size: 3vh;
+}
+#content_box > p {
+  font-size: 2vh;
+}
+
+/* 이미지 슬라이드쇼 */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+}
+.mySlides {
+  display: none;
+}
+.mySlides > img {
+  width: 100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 50%;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The typing effect */
+.speech1 {
+  display: flex;
+  font-size: 3.4vw;
+  align-items: center;
+  font-weight: bold;
+  margin: 20vh 0;
+}
+
+.speech1 > .fade-in {
+  color: black;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15vw solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+#about_wrapper {
+  margin-bottom: 80px;
+  display: flex;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* page3 start */
+.page3 {
+  height: 120vh;
+  /* background-color: rgb(233, 211, 158); */
+  text-align: center;
+  font-size: 4vw;
+  padding-bottom: 10px;
+  align-items: center;
+  font-weight: bold;
+  border: black solid 1px;
+  height: 150%;
+  border-bottom: solid 5px black;
+  border-top: solid 5px black;
+  padding: 20px;
+}
+#speech2 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+}
+.grid_container > div {
+  text-align: center;
+}
+.roadmap_img {
+  width: 30vw;
+  margin: auto;
+}
+.postit {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8e886;
+  width: 25vw;
+  height: 25vw;
+  margin: auto;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-6deg);
+  transition: transform 0.15s linear;
+  padding: 10px;
+}
+.postit > p:nth-child(1) {
+  font-size: 2vw;
+}
+.postit > p:nth-child(2) {
+  font-size: 1.5vw;
+}
+.postit:nth-child(even) {
+  transform: rotate(3deg);
+}
+.postit:nth-child(3) {
+  background-color: #9af059;
+}
+.postit:nth-child(6) {
+  background-color: #e656ad;
+}
+.postit p {
+  font-size: 20px;
+}
+.postit:hover,
+.postit:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+#sign_up {
+  background-color: #bfb1c4;
+}
+
+.ml2 {
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* page4 취미 start */
+.page4 {
+  padding: 20px;
+  border-bottom: 5px solid black;
+}
+#speech4 h2,
+#speech4 > p {
+  font-size: 8vh;
+}
+#flip {
+  display: inline-block;
+  /* height: 43px; */
+  height: 7vh;
+  /* overflow: hidden; */
+  margin-bottom: 10vh;
+}
+#flip > div {
+  height: 7vh;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#flip > div > div {
+  color: black;
+  padding: 4px 12px;
+  /* height: 10vh; */
+  padding-top: 13px;
+  font-size: 7vh;
+  font-weight: bold;
+}
+
+#flip div:first-child {
+  animation: show 7s linear infinite;
+}
+
+#flip div div {
+  /* background: #42c58a; */
+  color: #f8e886;
+}
+#flip div:first-child div {
+  /* background: #4ec7f3; */
+  color: aquamarine;
+}
+#flip div:last-child div {
+  /* background: #dc143c; */
+  color: #e656ad;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -290px;
+  }
+  5% {
+    margin-top: -280px;
+  }
+  15% {
+    margin-top: -260px;
+  }
+  23% {
+    margin-top: -245px;
+  }
+  28% {
+    margin-top: -230px;
+  }
+  35% {
+    margin-top: -215px;
+  }
+  40% {
+    margin-top: -200px;
+  }
+  45% {
+    margin-top: -180px;
+  }
+  56% {
+    margin-top: -160px;
+  }
+  61% {
+    margin-top: -140px;
+  }
+  70% {
+    margin-top: -120px;
+  }
+  80% {
+    margin-top: -20px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+}
+
+#speech4 {
+  text-align: center;
+}
+
+#hobby_contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 10vh;
+}
+#salsa_img {
+  width: 200%;
+  padding-left: 5vw;
+  display: none;
+}
+#salsa_article {
+  padding-right: 5vw;
+  display: none;
+}
+#salsaVideo {
+  display: flex;
+  margin-bottom: 10vh;
+}
+#salsaVideo > iframe {
+  height: 300px;
+  margin: auto;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* * page5 sign in START */
+.page5 {
+  background-color: #cdbdd3;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid black;
+}
+
+.page5 > div > p:nth-child(1) {
+  padding-top: 30px;
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+}
+.page5 > div > p:nth-child(2) {
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 1.5vw;
+}
+
+#signinButton {
+  border-radius: 5px;
+  width: 10vw;
+  background-color: white;
+  border: 0;
+  color: #cdbdd3;
+  margin-left: 45%;
+}
+#signinButton:hover {
+  cursor: pointer;
+}
+
+/* * page5 sign in END */
+/* ----------------------------------------------------------------------------------------- */
+
+/* * footer start * */
+footer {
+  /* border-top: 5px solid black; */
+  text-align: center;
+  height: 20vh;
+  padding: 15px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+#my_info > li {
+  font-size: 10px;
+  margin: 25px;
+  list-style: square;
+}
+#footer_icon > ul {
+  list-style-type: none;
+}
+#footer_icon > ul > li {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: red;
+}
+#footer_icon > ul > li > a {
+  color: black;
+}

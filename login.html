@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <style>
+    body::after{
+      content: "";
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+      background-size: 200%;
+      background-color: lightgray;
+    }
+    #container{
+      background-color: white;
+      width: 400px;
+      height: 60vh;
+      margin: auto;
+      border-radius: 15px;
+      margin-top: 8vh;
+    }
+    header{
+      padding-top: 4vh;
+    }
+    header>h2{
+      text-align: center;
+    }
+    .inputBox{
+      border-right: none;
+      border-top: none;
+      border-left: none;
+      width: 80%;
+    }
+    h2{
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    #pwMsg,#idMsg,#pwConfirmMsg,#userNameMsg,#emailMsg{
+      display: none;
+      margin-top: 0;
+      font-size: 10px;
+      color: red;
+      width: 290px;
+      margin-top: 5px;
+    }
+    ul{
+      list-style: none;
+    }
+    li{
+      margin-bottom: 20px;
+    }
+    .inputBox{
+      margin-top: 20px;
+    }
+    .red-border{
+      border: 2px solid red;
+    }
+    #submit{
+      margin-left: 40%;
+      margin-bottom: 10%;
+      margin-top: 10%;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div id="container">
+
+  <header><h2>회원가입</h2></header>
+  <form action="" name=memberFrm>
+
+    <ul>
+      <li>
+        <!-- <label for="id"> 아 이 디 :   </label><br> -->
+        <input type="text" name="id" id="id" class="inputBox" placeholder="user Id">
+        <div id="idMsg"> "5~20자의 영문 소문자, 숫자만 사용 가능합니다."</div>
+      </li>
+      <li>
+        <!-- <label for="password">비밀번호: </label><br> -->
+        <input type="password" name="password" id="password" class="inputBox"placeholder="password">
+        <div id="pwMsg">"비밀번호는 8자 이상이어야 하며, 숫자/대문자/소문자/특수문자를 모두 포함해야 합니다."</div>
+        
+      </li>
+      <li>
+        <!-- <label for="password_confirm">비밀번호 확인: </label><br> -->
+        <input type="password" id="password_confirm" class="inputBox" placeholder="password check">
+        <div id="pwConfirmMsg">"비밀번호가 일치하지 않습니다."</div>
+        
+      </li>
+      <li>
+        <!-- <label for="name">이 &nbsp 름&nbsp&nbsp : </label><br> -->
+        <input type="text" name="userName" id="userName" class="inputBox" placeholder="userName"> <br>
+        <div id="userNameMsg">"이름은 한글/영어 구성으로 최소 3글자, 최대20자까지 설정 가능합니다"</div>
+      </li>
+
+      <li>
+        <!-- <label for="email">이메일: </label><br> -->
+        <input type="text" name="email" id="email" class="inputBox" placeholder="email"><br>
+        <div id="emailMsg">"이메일 형식에 맞게 작성해주세요."</div>
+      </li>
+    </ul>
+    <input type="hidden" id="idVal" value=0>
+    <input type="hidden" id="passwordVal" value=0>
+    <input type="hidden" id="password_confirmVal" value=0>
+    <input type="hidden" id="userNameVal" value=0>
+    <input type="hidden" id="emailVal" value=0>
+
+    <input type="submit" id="submit" value="가입하기">
+  </form>
+</div>
+
+
+
+  <script>
+    /* 입력값 전달 */
+    document.memberFrm.onsubmit = ()=>{
+      if(!idVal.value)
+        return false;
+      if(!passwordVal.value)
+        return false;
+      if(!password_confirmVal.value)
+        return false;
+      if(!userNameVal.value)
+        return false;
+      if(!emailVal.value)
+        return false;
+
+    }
+
+    /* 아이디값 체크 */
+    id.onblur = function(){
+      let inputBox = document.getElementsByTagName('input');
+      const idcheck = /[0-9a-z]{5,20}/;
+
+      if(!idcheck.test(id.value)){
+        id.nextElementSibling.style.display="block";
+        // inputBox[0].addClass("red-border");
+        idVal.value=0;
+      }
+    }
+    id.onfocus = function(){
+      id.nextElementSibling.style.display="none";
+    }
+
+    /* 비밀번호 체크 */
+    password.onblur = function(){
+      const reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/;
+      if(!reg.test(password.value)){
+        pwMsg.style.display="block";
+        passwordVal.value=0;
+      }
+    }
+    password.onfocus = function(){
+      password.nextElementSibling.style.display="none";
+    }
+
+    /* 비밀번호 확인 체크 */
+    password_confirm.onblur = ()=>{
+      if(password.value != password_confirm.value){
+        pwConfirmMsg.style.display="block"
+        password_confirmVal = 0;
+      }
+      else if(password.value === password_confirm.value){
+        password.nextElementSibling.style.display="none";
+      }
+    }
+    password_confirm.onfocus = ()=>{
+      password_confirm.nextElementSibling.style.display="none";
+    }
+    /* 이름 체크 */
+    userName.onblur = ()=>{
+      const nameCheck = /[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]{3,20}/;
+      if(!nameCheck.test(userName.value)){
+        userNameMsg.style.display="block";
+        userNameVal.value = 0;
+      }
+    }
+    userName.onfocus = ()=>{
+      userNameMsg.style.display="none";
+    }
+    /* 이메일 체크 */
+    email.onblur = function(){
+      const emailCheck = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+
+      if(!emailCheck.test(email.value)){
+        emailMsg.style.display="block";
+        emailVal.value=0;
+      }
+    }
+    email.onfocus = function(){
+      emailMsg.style.display="none";
+    }
+
+
+  </script>
+
+</body>
+</html>
